@@ -1,0 +1,51 @@
+{
+  "name": "dsh-ability-router",
+  "version": "1.0.0",
+  "description": "Native DeepSeek Harness (dsh) plugin: a three-in-one ability router (skill + DSH built-in tool + local exe) with a thin catalog and on-demand long-tail skill retrieval. Registers the ability_find tool.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js"
+    }
+  },
+  "files": [
+    "lib",
+    "data/abilities.json",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "cordis",
+    "ability-router",
+    "skill-router",
+    "tool-router"
+  ],
+  "author": "ability-router contributors",
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2",
+    "@deepseek-ai/dsh-tools": "^0.1.5-rc.2 || ^0.2.0-rc",
+    "@deepseek-ai/schemastery": "^3.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suishou0325/ability-router.git"
+  },
+  "homepage": "https://github.com/suishou0325/ability-router#readme",
+  "bugs": {
+    "url": "https://github.com/suishou0325/ability-router/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

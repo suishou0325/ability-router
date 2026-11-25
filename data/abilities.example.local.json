@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "_comment": "Copy to abilities.local.json and list YOUR machine-only capabilities. Merged with abilities.json at runtime. This file is gitignored.",
+  "exe": [
+    {
+      "name": "my-tool.cmd",
+      "title": "我的工具",
+      "what": "一句话：做什么",
+      "when": "什么时候用",
+      "command": "C:/path/to/my-tool.cmd {input}",
+      "keywords": "检索词",
+      "risk": "none"
+    }
+  ]
+}

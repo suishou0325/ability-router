@@ -1,0 +1,329 @@
+{
+  "version": 1,
+  "skills": [],
+  "tools": [
+    {
+      "name": "skill",
+      "title": "加载技能全文",
+      "what": "按技能名加载其完整说明书",
+      "when": "确定用某个技能后调用",
+      "keywords": "加载技能 读技能 技能全文",
+      "risk": "none"
+    },
+    {
+      "name": "run_code",
+      "title": "执行代码",
+      "what": "跑TypeScript程序调用本会话全部工具",
+      "when": "需要编排多工具、写脚本逻辑时",
+      "keywords": "执行代码 脚本 编排 程序",
+      "risk": "caution"
+    },
+    {
+      "name": "ops_bash",
+      "title": "执行命令",
+      "what": "跑Bash命令/脚本",
+      "when": "短命令、管道、跑脚本",
+      "keywords": "命令 bash 脚本 执行 管道",
+      "risk": "caution"
+    },
+    {
+      "name": "read",
+      "title": "读文件",
+      "what": "读UTF-8文本文件带行号",
+      "when": "读文本/markdown/代码",
+      "keywords": "读 文件 文本 打开",
+      "risk": "none"
+    },
+    {
+      "name": "write",
+      "title": "写文件",
+      "what": "创建或整体覆盖UTF-8文件",
+      "when": "新建或重写文件",
+      "keywords": "写 创建 覆盖 文件",
+      "risk": "caution"
+    },
+    {
+      "name": "edit",
+      "title": "改文件",
+      "what": "按字面文本替换改文件",
+      "when": "局部修改文件",
+      "keywords": "改 编辑 替换 文件",
+      "risk": "caution"
+    },
+    {
+      "name": "ops_grep",
+      "title": "搜内容",
+      "what": "正则搜文件内容",
+      "when": "找代码里的字符串/函数",
+      "keywords": "搜索 内容 grep 正则 查找",
+      "risk": "none"
+    },
+    {
+      "name": "glob",
+      "title": "找文件",
+      "what": "按glob模式找文件路径",
+      "when": "找文件/按名匹配",
+      "keywords": "找文件 路径 glob 匹配",
+      "risk": "none"
+    },
+    {
+      "name": "ops_remove",
+      "title": "删文件",
+      "what": "删单个文件（不可恢复）",
+      "when": "明确要删文件时",
+      "keywords": "删除 文件 移除",
+      "risk": "danger"
+    },
+    {
+      "name": "ops_move",
+      "title": "移文件",
+      "what": "移动文件（同盘原子）",
+      "when": "搬文件",
+      "keywords": "移动 搬 文件 重命名",
+      "risk": "caution"
+    },
+    {
+      "name": "ops_copy",
+      "title": "复制文件",
+      "what": "复制单文件不覆盖",
+      "when": "复制文件",
+      "keywords": "复制 文件",
+      "risk": "none"
+    },
+    {
+      "name": "web_search",
+      "title": "联网搜索",
+      "what": "搜最新信息",
+      "when": "查当前信息、版本、新闻",
+      "keywords": "搜索 联网 最新 新闻 版本",
+      "risk": "none"
+    },
+    {
+      "name": "web_fetch",
+      "title": "抓网页",
+      "what": "抓指定URL正文",
+      "when": "读一个网页内容",
+      "keywords": "抓网页 读网页 URL",
+      "risk": "none"
+    },
+    {
+      "name": "firecrawl",
+      "title": "Firecrawl抓取",
+      "what": "网页搜索/抓取/解析(MCP)",
+      "when": "深度抓取、结构化提取",
+      "keywords": "firecrawl 抓取 搜索 解析",
+      "risk": "none"
+    },
+    {
+      "name": "dsh_browser",
+      "title": "内置浏览器",
+      "what": "共享浏览器打开/点击/填表/截图/抓取",
+      "when": "网页交互、看页面、填表单",
+      "keywords": "浏览器 网页 打开 点击 填表 截图 抓取",
+      "risk": "none"
+    },
+    {
+      "name": "office",
+      "title": "Office处理",
+      "what": "渲染/转换/重算Office文档（先载office技能）",
+      "when": "把docx/xlsx/pptx转pdf或渲染成图",
+      "keywords": "office 渲染 转换 重算 文档",
+      "risk": "none"
+    },
+    {
+      "name": "code-review-graph",
+      "title": "代码图谱MCP",
+      "what": "代码知识图谱查询",
+      "when": "谁调用/影响范围/测试覆盖",
+      "keywords": "代码图谱 调用 影响 测试 架构",
+      "risk": "none"
+    },
+    {
+      "name": "subagent",
+      "title": "派子代理",
+      "what": "独立代理干自包含任务",
+      "when": "独立调研/实现/分析",
+      "keywords": "子代理 委托 并行 独立",
+      "risk": "none"
+    },
+    {
+      "name": "schedule_create",
+      "title": "定时任务",
+      "what": "创建周期性任务",
+      "when": "定时提醒/周期报告",
+      "keywords": "定时 周期 提醒 任务",
+      "risk": "caution"
+    },
+    {
+      "name": "todo_write",
+      "title": "任务清单",
+      "what": "记录多步任务进度",
+      "when": "多步任务跟踪",
+      "keywords": "待办 清单 进度 任务",
+      "risk": "none"
+    },
+    {
+      "name": "create_goal",
+      "title": "长期目标",
+      "what": "建跨轮次持续目标",
+      "when": "长任务自动续跑",
+      "keywords": "目标 长期 持续 续跑",
+      "risk": "none"
+    }
+  ],
+  "exe": [
+    {
+      "name": "uv",
+      "title": "uv",
+      "what": "Python包管理与建venv",
+      "when": "装Python包、建虚拟环境",
+      "command": "uv {pip|venv|run} ...",
+      "keywords": "python 包管理 venv 虚拟环境",
+      "risk": "none"
+    },
+    {
+      "name": "typst",
+      "title": "typst",
+      "what": "从.typ源码排版出PDF",
+      "when": "写文档排PDF",
+      "command": "typst compile {input.typ} {output.pdf}",
+      "keywords": "排版 PDF typst 文档",
+      "risk": "none"
+    },
+    {
+      "name": "jq",
+      "title": "jq",
+      "what": "JSON查询与处理",
+      "when": "处理JSON数据",
+      "command": "jq '{filter}' {input.json}",
+      "keywords": "json jq 查询 处理",
+      "risk": "none"
+    },
+    {
+      "name": "fd",
+      "title": "fd",
+      "what": "快速找文件",
+      "when": "按名找文件",
+      "command": "fd '{pattern}' {path}",
+      "keywords": "找文件 fd 快速",
+      "risk": "none"
+    },
+    {
+      "name": "bat",
+      "title": "bat",
+      "what": "带语法高亮的cat",
+      "when": "看代码文件",
+      "command": "bat {file}",
+      "keywords": "查看 cat bat 高亮",
+      "risk": "none"
+    },
+    {
+      "name": "fzf",
+      "title": "fzf",
+      "what": "模糊查找器",
+      "when": "交互式筛选",
+      "command": "fzf",
+      "keywords": "模糊 查找 fzf 筛选",
+      "risk": "none"
+    },
+    {
+      "name": "czkawka_cli",
+      "title": "czkawka",
+      "what": "找重复文件",
+      "when": "清理重复文件",
+      "command": "czkawka_cli dup {path}",
+      "keywords": "重复文件 清理 czkawka",
+      "risk": "caution"
+    },
+    {
+      "name": "python",
+      "title": "python",
+      "what": "跑Python脚本",
+      "when": "Python任务",
+      "command": "python {script.py}",
+      "keywords": "python 脚本",
+      "risk": "none"
+    },
+    {
+      "name": "node",
+      "title": "node/npm",
+      "what": "跑JS、装npm包",
+      "when": "JS任务、装依赖",
+      "command": "node {script.js} / npm {install|run}",
+      "keywords": "node npm js 依赖",
+      "risk": "caution"
+    },
+    {
+      "name": "git",
+      "title": "git",
+      "what": "版本管理",
+      "when": "提交/分支/拉取",
+      "command": "git {commit|pull|push|status}",
+      "keywords": "git 版本 提交 分支",
+      "risk": "caution"
+    },
+    {
+      "name": "code",
+      "title": "VS Code",
+      "what": "命令行打开VS Code",
+      "when": "在编辑器打开文件/目录",
+      "command": "code {path}",
+      "keywords": "vscode code 编辑器 打开",
+      "risk": "none"
+    },
+    {
+      "name": "ffmpeg",
+      "title": "ffmpeg",
+      "what": "音视频处理",
+      "when": "转码、剪辑、字幕、抽帧",
+      "command": "ffmpeg -i {input} {output}",
+      "keywords": "ffmpeg 视频 音频 转码 剪辑 字幕",
+      "risk": "none"
+    },
+    {
+      "name": "7z",
+      "title": "7-Zip",
+      "what": "压缩解压",
+      "when": "打包/解压",
+      "command": "7z {a|x} {archive} {files}",
+      "keywords": "压缩 解压 7z 打包",
+      "risk": "none"
+    },
+    {
+      "name": "winget",
+      "title": "winget",
+      "what": "命令行装软件",
+      "when": "装系统软件",
+      "command": "winget install {package}",
+      "keywords": "装软件 winget 安装",
+      "risk": "danger"
+    },
+    {
+      "name": "ollama",
+      "title": "ollama",
+      "what": "本地大模型",
+      "when": "跑本地模型",
+      "command": "ollama run {model}",
+      "keywords": "ollama 本地模型 大模型",
+      "risk": "none"
+    },
+    {
+      "name": "pandoc",
+      "title": "Pandoc",
+      "what": "文档格式互转",
+      "when": "md↔docx/html/pdf等互转",
+      "command": "pandoc {input} -o {output}",
+      "keywords": "pandoc 转换 格式 文档",
+      "risk": "none"
+    },
+    {
+      "name": "markitdown",
+      "title": "markitdown",
+      "what": "文档转Markdown",
+      "when": "把docx/pdf/html转md",
+      "command": "markitdown {input} -o {output.md}",
+      "keywords": "markitdown 转md 文档",
+      "risk": "none"
+    }
+  ]
+}

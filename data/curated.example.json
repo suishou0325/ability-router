@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "_comment": "Copy this file to curated.json and edit for YOUR machine. Lists skill names (frontmatter name, not folder name).",
+  "keep": [
+    "skill-a",
+    "skill-b"
+  ],
+  "drop": [
+    "skill-c",
+    "skill-d"
+  ],
+  "dropDirs": [],
+  "keepParkedConversational": [
+    "grill-me",
+    "wait-what",
+    "teach"
+  ]
+}

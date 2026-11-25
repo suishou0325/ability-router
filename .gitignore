@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+logs/
+
+# Local machine-specific config (contains YOUR software stack / skill collection — not for publication)
+data/abilities.local.json
+data/curated.json
+
+# Secrets & credentials — never commit
+.env
+*.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+token.json
+secrets/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
