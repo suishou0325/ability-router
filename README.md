@@ -24,7 +24,7 @@ ability-router/
 │   ├── index.js        插件主体：注册 ability_find 工具
 │   └── ranking.js      打分函数（照抄 dsh-ops/lib/discovery/ranking.js，中文 regex 增强）
 ├── data/
-│   ├── abilities.json             三合一能力清单（示例：tools 21 / exe 17，提交）
+│   ├── abilities.json             三合一能力清单（skills 17 / tools 22 / exe 17，提交）
 │   ├── abilities.local.json       你的机器私有清单（不提交）
 │   ├── curated.json               你的精选/长尾名单（不提交）
 │   └── *.example.json             上面两个的模板

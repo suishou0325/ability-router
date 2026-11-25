@@ -1,6 +1,143 @@
 {
   "version": 1,
-  "skills": [],
+  "skills": [
+    {
+      "name": "local-toolbox",
+      "title": "本机工具箱",
+      "what": "读文档、转格式、排版PDF、无GUI造/改Word·Excel·PPT、OCR识别图片文字、找重复文件",
+      "when": "读docx/pdf/pptx/xlsx、转md/pdf、排版出PDF、生成或修改Office文档、识别图片里的字、找重复文件",
+      "keywords": "文档 转换 读docx 读pdf 转md 转pdf 排版 报告 docx xlsx pptx OCR 识别文字 重复文件 markitdown pandoc LibreOffice typst lo-cli",
+      "risk": "none"
+    },
+    {
+      "name": "ppt-master",
+      "title": "PPT大师",
+      "what": "AI生成可编辑PPTX、重构页面视觉、套模板、加动画旁白、做PPT视频",
+      "when": "生成/重构/美化PPT、做演示文稿、课件、带旁白的PPT视频",
+      "keywords": "PPT 演示 幻灯片 pptx 课件 生成 美化 重构 模板 动画 旁白 视频",
+      "risk": "none"
+    },
+    {
+      "name": "research",
+      "title": "调研",
+      "what": "派后台agent查高可信一手源，结论落盘md",
+      "when": "调研主题、查文档/API事实、要读大量资料的活、查最新新闻/资讯/进展",
+      "keywords": "调研 研究 查资料 查文档 API事实 一手源 后台 读资料 新闻 最新 资讯 热点 最近进展",
+      "risk": "none"
+    },
+    {
+      "name": "skill-menu",
+      "title": "技能菜单",
+      "what": "展示技能菜单帮用户挑技能",
+      "when": "用户问『我该用什么/有什么技能/怎么用你』",
+      "keywords": "菜单 技能 我该用什么 有什么能力 怎么用",
+      "risk": "none"
+    },
+    {
+      "name": "humanizer-zh",
+      "title": "中文去AI味",
+      "what": "删空话重复模板化表达，保留事实和作者声音",
+      "when": "润色中文文章/评论/文档，去AI味",
+      "keywords": "润色 中文 去AI味 去模板 空话 重复 编辑 修改",
+      "risk": "none"
+    },
+    {
+      "name": "saoshu",
+      "title": "扫书OCR",
+      "what": "扫描版PDF转干净Markdown，MinerU免登录免token",
+      "when": "扫书、图片型PDF、没文字层的PDF转md、OCR整本书",
+      "keywords": "扫书 扫描版 PDF 图片型 没文字层 OCR 影印 转md 提取文字",
+      "risk": "none"
+    },
+    {
+      "name": "chem-lab-tutor",
+      "title": "分析化学实验家教",
+      "what": "分析化学实验期末一对一，8天计划逐实验教、按评分点出题批改",
+      "when": "分析化学实验、滴定、实验十到十七、备考复习",
+      "keywords": "分析化学实验 滴定 实验 备考 复习 家教 出题 批改",
+      "risk": "none"
+    },
+    {
+      "name": "study-cram",
+      "title": "考前家教",
+      "what": "理工科考前突击，教材拆考点→讲→变体→自测，覆盖五门课",
+      "when": "概率论/大物/无机化学/实验备考、划重点、出题自测",
+      "keywords": "备考 复习 突击 划重点 出题 自测 概率论 数理统计 大学物理 无机化学 错题本 预测卷",
+      "risk": "none"
+    },
+    {
+      "name": "diagnosing-dsh-plugins",
+      "title": "插件诊断",
+      "what": "DSH插件坏/报错/行为异常/逆向机制的排查流程",
+      "when": "插件坏了、报错、修插件、分析插件、工具没注册",
+      "keywords": "插件 报错 修复 逆向 分析 工具没注册 预设缺能力",
+      "risk": "none"
+    },
+    {
+      "name": "code-review-graph",
+      "title": "代码图谱",
+      "what": "代码知识图谱查谁调用、影响范围、测试覆盖",
+      "when": "谁调用它、改它影响谁、哪些测试覆盖、架构概览",
+      "keywords": "代码图谱 调用链 影响范围 测试覆盖 爆炸半径 架构 谁调用",
+      "risk": "none"
+    },
+    {
+      "name": "agent-browser-cli",
+      "title": "浏览器自动化",
+      "what": "命令行驱动真实Chrome做网页任务",
+      "when": "打开网页、点击、填表、截图、抓数据、批量抓页面、绕开GUI手动操作",
+      "keywords": "浏览器 网页 打开 点击 填表 截图 抓数据 自动化 登录",
+      "risk": "none"
+    },
+    {
+      "name": "nature-reader",
+      "title": "论文精读",
+      "what": "中英对照论文精读器，文本图表公式对齐",
+      "when": "全文翻译、中英对照、论文精读",
+      "keywords": "论文 翻译 对照 精读 全文 图表 公式",
+      "risk": "none"
+    },
+    {
+      "name": "retro",
+      "title": "回顾",
+      "what": "编码会话回顾找环境改进点",
+      "when": "会话收尾复盘、找改进",
+      "keywords": "回顾 复盘 改进 收尾 总结",
+      "risk": "none"
+    },
+    {
+      "name": "writing-skills",
+      "title": "写技能",
+      "what": "创建/编辑/验证skill，写SKILL.md/AGENTS.md",
+      "when": "写新技能、改技能、写AGENTS.md",
+      "keywords": "写技能 创建技能 改技能 SKILL AGENTS 验证",
+      "risk": "none"
+    },
+    {
+      "name": "find-skills",
+      "title": "找技能",
+      "what": "发现并安装agent skill",
+      "when": "『怎么做到X』『找X的技能』『怎么装/安装一个技能』、扩展能力",
+      "keywords": "找技能 安装技能 发现 扩展能力 怎么做 装技能 怎么装 新技能 装一个技能",
+      "risk": "none"
+    },
+    {
+      "name": "pii-check",
+      "title": "pii-check 泄密审计",
+      "what": "开源/发布前审计仓库: PII 泄露、密钥、敏感数据, 可跑 gitleaks、装 pre-commit 钩子",
+      "when": "把私有仓转公开前、引入外部数据后、发布前检查单",
+      "keywords": "pii 泄密 密钥 审计 开源 secret 隐私 pre-commit gitleaks",
+      "risk": "none"
+    },
+    {
+      "name": "ability-router",
+      "title": "能力路由入口",
+      "what": "三合一能力路由器：按意图检索 skill / DSH 内置工具 / 本机 exe",
+      "when": "拿不准该调哪个技能或命令时；或用户敲 /ability-router",
+      "keywords": "路由 能力 用什么 有什么 找工具 找技能 ability router",
+      "risk": "none"
+    }
+  ],
   "tools": [
     {
       "name": "skill",
@@ -333,5 +470,6 @@
       "keywords": "markitdown 转md 文档",
       "risk": "none"
     }
-  ]
+  ],
+  "note": ""
 }
