@@ -7,10 +7,11 @@ Native DeepSeek Harness（dsh）插件：**三合一能力路由器**。
 
 ## 它解决什么
 
-dsh 默认把全部 54 条技能的名字+描述塞进每次请求（约 4232 tokens）。本插件改为：
+dsh 默认把全部技能的名字+描述塞进每次请求。我机器上 56 条进目录，13213 字符 ≈ 4404 tokens —— 这是每轮的固定开销。本插件改为：
 
-- **精选常驻 15 条**（省约 81% 目录开销）；
+- **精选常驻 17 条**（3682 字符 ≈ 1227 tokens，**省 72%** 目录开销）；
 - **39 条长尾**从目录撤下，但 `ability_find` 命中时能绕过 skill 工具限制、直接取全文内联返回 —— 能力没丢，只是不常驻；
+- 仍常驻但不常用的，`ability_find` 只给名字，让模型走官方 `skill` 工具加载（不重复占 token）；
 - 工具与本机 exe 一并登记，一个 query 同时给三类答案，分类不混排。
 
 ## 目录结构
@@ -23,7 +24,10 @@ ability-router/
 │   ├── index.js        插件主体：注册 ability_find 工具
 │   └── ranking.js      打分函数（照抄 dsh-ops/lib/discovery/ranking.js，中文 regex 增强）
 ├── data/
-│   └── abilities.json  三合一能力清单（skills 15 / tools 21 / exe 28）
+│   ├── abilities.json             三合一能力清单（示例：tools 21 / exe 17，提交）
+│   ├── abilities.local.json       你的机器私有清单（不提交）
+│   ├── curated.json               你的精选/长尾名单（不提交）
+│   └── *.example.json             上面两个的模板
 ├── scripts/
 │   ├── park-skills.mjs      把长尾技能加 disable-model-invocation: true（撤目录）
 │   ├── unpark-skills.mjs    回退：删掉该键，恢复常驻（--except 可保留对话型技能）
@@ -129,7 +133,7 @@ node scripts/prepublish-check.mjs
 
 - 照抄官方 dsh-ops 打分函数与 dsh-tool-skill 工具骨架，不自行发明机制。
 - `abilities.json` 读失败 → 返回 error 提示，让模型直接按常识答，**不中断任务**。
-- 撤目录只改 `SKILL.md` frontmatter，不删文件；回退脚本一键还原 54 条常驻。
+- 撤目录只改 `SKILL.md` frontmatter，不删文件；回退脚本一键还原全部常驻技能（撤下的 39 条全部恢复）。
 - 更新 dsh 后若行为异常：先卸载插件（`dsh plugin remove`），再看是否仍复现；插件改动可见、可回退。
 
 ## 回退

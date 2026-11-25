@@ -169,6 +169,14 @@
       "when": "长任务自动续跑",
       "keywords": "目标 长期 持续 续跑",
       "risk": "none"
+    },
+    {
+      "name": "ability_find",
+      "title": "能力路由（本插件自身）",
+      "what": "按意图检索技能/工具/本机exe并返回分类清单",
+      "when": "拿不准该用哪个技能或命令时；或用户敲 /ability-router",
+      "keywords": "路由 能力 找工具 找技能 ability router 用什么 有什么",
+      "risk": "none"
     }
   ],
   "exe": [
